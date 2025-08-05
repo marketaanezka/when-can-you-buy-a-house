@@ -1,6 +1,6 @@
 export const Currencies = ['usd', 'czk', 'eur']
 
-export const BITCOIN = 'bitcoin,satoshi'
+export const BITCOIN = 'bitcoin'
 
 // https://www.cbamonitor.cz/kategorie/ceny-nemovitosti
 export const FlatPriceByRegion = {
