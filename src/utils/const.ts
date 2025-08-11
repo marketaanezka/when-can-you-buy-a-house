@@ -19,7 +19,7 @@ export const FlatPriceByRegion = {
   Vysocina: 72700,
   Karlovarsky: 68000,
   Ustecky: 64600,
-}
+} as const
 
 export const FlatPriceByCity = {
   Czechia: 70900,
@@ -36,7 +36,7 @@ export const FlatPriceByCity = {
   Ostrava: 51800,
   KarlovyVary: 45100,
   UstiNadLabem: 40100,
-}
+} as const
 
 export const HousePrice = {
   Czechia: 5700000,
@@ -53,4 +53,21 @@ export const HousePrice = {
   Jihlava: 7000000,
   UstiNadLabem: 6600000,
   Ostrava: 4900000,
-}
+} as const
+
+export const Regions = {
+  Czechia: 'Česká republika',
+  Prague: 'Praha',
+  Brno: 'Brno',
+  Liberec: 'Liberec',
+  Plzen: 'Plzeň',
+  CeskeBudejovice: 'České Budějovice',
+  Pardubice: 'Pardubice',
+  HradecKralove: 'Hradec Králové',
+  Olomouc: 'Olomouc',
+  Zlin: 'Zlín',
+  KarlovyVary: 'Karlovy Bary',
+  Jihlava: 'Jihlava',
+  UstiNadLabem: 'Ústí nad Labem',
+  Ostrava: 'Ostrava',
+} as const

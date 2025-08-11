@@ -1,24 +1,21 @@
 import { useState } from 'react'
 import { Input } from '@/components/ui/input'
-import { useCoinPrice } from '@/hooks/useCoinPrice'
 import { useSearch } from '@tanstack/react-router'
-import { LoaderCircleIcon } from 'lucide-react'
 import { Label } from '@/components/ui/label'
 import { BITCOIN } from '@/utils/const'
+import { CryptoPriceResult } from '@/schemas/coinResult'
 
 const SATS_IN_BTC = 100000000
 
-export const CoinPrice = () => {
+type Props = {
+  rates: CryptoPriceResult
+}
+
+export const CoinPrice = ({ rates }: Props) => {
   const { currency } = useSearch({ from: '/' })
   const [amount, setAmount] = useState(1)
 
-  const { data, isPending, isError, error } = useCoinPrice(BITCOIN, currency)
-
-  if (isPending) return <LoaderCircleIcon />
-
-  if (isError) return <div>{error.message}</div>
-
-  const conversionRate = data[BITCOIN][currency]
+  const conversionRate = rates[BITCOIN][currency]
 
   return (
     <>
