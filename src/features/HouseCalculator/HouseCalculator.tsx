@@ -35,7 +35,9 @@ export const HouseCalculator = ({ rates }: Props) => {
         </SelectTrigger>
         <SelectContent>
           {Object.entries(Regions).map((entry) => (
-            <SelectItem value={entry[0]}>{entry[1]}</SelectItem>
+            <SelectItem value={entry[0]} key={entry[0]}>
+              {entry[1]}
+            </SelectItem>
           ))}
         </SelectContent>
       </Select>
